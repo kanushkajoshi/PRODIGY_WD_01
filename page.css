@@ -8,12 +8,11 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(to right, #ff6b6b, #ff9e51, #ffab4d, #ffbd5a); /* Gradient background with multiple colors */
+    background: linear-gradient(to right, #4CAF50, #81C784); /* Gradient background with green shades */
     z-index: 1000;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-bottom: 2px solid #ff4d6b; /* Add a border for contrast */
-    background-color: #f7f7f7; /* Background color for fallback */
+    border-bottom: 2px solid #388E3C; /* Add a border for contrast */
 }
 
 .nav-list {
@@ -31,20 +30,19 @@ body {
 .nav-item a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
     font-weight: bold;
     font-size: 16px;
     letter-spacing: 1px; /* Add letter spacing for clarity */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for depth */
 }
 
 .nav-item a:hover {
-    color: #fff;
-    text-shadow: none; /* Remove text shadow on hover */
+    color: #388E3C; /* Change font color on hover */
+    transform: scale(1.1); /* Scale up on hover */
 }
 
 .section {
-    padding: 100px 0;
+    padding: 100px 20px;
     height: 100vh;
     text-align: center;
     display: flex;
@@ -52,17 +50,12 @@ body {
     align-items: center;
     overflow: hidden;
     position: relative;
-    transition: background-color 0.5s ease;
 }
 
-.section:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background on hover */
-}
-
-#home { background-color: #13c377; /* Green */ }
-#about { background-color: #a20f0f; /* Red */ }
-#services { background-color: #80d8ff; /* Blue */ }
-#contact { background-color: #b388ff; /* Purple */ }
+#home { background-color: #FFCDD2; /* Light Red */ }
+#about { background-color: #FFF9C4; /* Light Yellow */ }
+#services { background-color: #BBDEFB; /* Light Blue */ }
+#contact { background-color: #D1C4E9; /* Light Purple */ }
 
 .section-content {
     max-width: 800px;
@@ -75,4 +68,8 @@ body {
 
 .section:hover .section-content {
     transform: scale(1.05); /* Scale up on hover */
+}
+
+.scrolled {
+    background: linear-gradient(to right, #388E3C, #4CAF50); /* Different gradient when scrolled */
 }
